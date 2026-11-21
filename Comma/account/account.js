@@ -40,7 +40,7 @@ function reg() {
                             const jsonString = JSON.stringify(request);
 
                             var xhr = new XMLHttpRequest();
-                            xhr.open("POST", "/api");
+                            xhr.open("POST", "/api/");
                             xhr.send(jsonString);
                             xhr.onload = function () {
                                 var response = xhr.responseText;
@@ -123,7 +123,7 @@ function auth() {
             const jsonString = JSON.stringify(request);
 
             var xhr = new XMLHttpRequest();
-            xhr.open("POST", "/api");
+            xhr.open("POST", "/api/");
             xhr.send(jsonString);
             xhr.onload = function () {
                 var response = xhr.responseText;

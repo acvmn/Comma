@@ -37,7 +37,7 @@ async function new_file_post(e, file) {
 
     if (await size(attachment)) {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
+        xhr.open("POST", "/upload/");
         if (login && password) {
             xhr.setRequestHeader("Login", login);
             xhr.setRequestHeader("Password", password);
@@ -61,7 +61,7 @@ async function new_file_post(e, file) {
                     attachment2.append("userfile", userfile2.blob, userfile2.fileName);
 
                     const xhr2 = new XMLHttpRequest();
-                    xhr2.open("POST", "/upload");
+                    xhr2.open("POST", "/upload/");
                     if (login && password) {
                         xhr2.setRequestHeader("Login", login);
                         xhr2.setRequestHeader("Password", password);
@@ -98,7 +98,7 @@ async function new_file_comment(file, id, post, comments, e) {
 
     if (await size(attachment)) {
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
+        xhr.open("POST", "/upload/");
         if (login && password) {
             xhr.setRequestHeader("Login", login);
             xhr.setRequestHeader("Password", password);
@@ -119,7 +119,7 @@ async function new_file_comment(file, id, post, comments, e) {
                     attachment2.append("userfile", userfile2.blob, userfile2.fileName);
 
                     const xhr2 = new XMLHttpRequest();
-                    xhr2.open("POST", "/upload");
+                    xhr2.open("POST", "/upload/");
                     xhr2.setRequestHeader("Comment", post);
                     xhr2.send(attachment2);
                 }
@@ -266,7 +266,7 @@ function showComments(id, post) {
     const jsonString = JSON.stringify(request);
 
     const xhrHistory = new XMLHttpRequest();
-    xhrHistory.open("POST", "/api");
+    xhrHistory.open("POST", "/api/");
     xhrHistory.send(jsonString);
     xhrHistory.onload = function () {
         const start = xhrHistory.responseText;
@@ -688,7 +688,7 @@ function loadImages() {
                         const jsonString = JSON.stringify(request);
 
                         const xhrHistory = new XMLHttpRequest();
-                        xhrHistory.open("POST", "/api");
+                        xhrHistory.open("POST", "/api/");
                         xhrHistory.setRequestHeader("Login", login);
                         xhrHistory.setRequestHeader("Password", password);
                         xhrHistory.send(jsonString);
@@ -702,7 +702,7 @@ function loadImages() {
                         const jsonString = JSON.stringify(request);
 
                         const xhrHistory = new XMLHttpRequest();
-                        xhrHistory.open("POST", "/api");
+                        xhrHistory.open("POST", "/api/");
                         xhrHistory.setRequestHeader("Login", login);
                         xhrHistory.setRequestHeader("Password", password);
                         xhrHistory.send(jsonString);
@@ -783,7 +783,7 @@ function load() {
     const jsonString = JSON.stringify(request);
 
     const xhrHistory = new XMLHttpRequest();
-    xhrHistory.open("POST", "/api");
+    xhrHistory.open("POST", "/api/");
     xhrHistory.setRequestHeader("Login", login);
     xhrHistory.setRequestHeader("Password", password);
     xhrHistory.send(jsonString);
@@ -885,7 +885,7 @@ async function new_text_post() {
 
         if (await size(attachment)) {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "/upload");
+            xhr.open("POST", "/upload/");
             if (login && password) {
                 xhr.setRequestHeader("Login", login);
                 xhr.setRequestHeader("Password", password);
@@ -931,7 +931,7 @@ async function new_text_comment(id, post) {
 
         if (await size(attachment)) {
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "/upload");
+            xhr.open("POST", "/upload/");
             if (login && password) {
                 xhr.setRequestHeader("Login", login);
                 xhr.setRequestHeader("Password", password);

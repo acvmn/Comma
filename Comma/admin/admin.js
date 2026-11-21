@@ -28,7 +28,7 @@ function rebootServer() {
     const jsonString = JSON.stringify(request);
 
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "/admin");
+    xhr.open("POST", "/admin/");
     xhr.setRequestHeader("Login", login);
     xhr.setRequestHeader("Password", password);
     xhr.send(jsonString);

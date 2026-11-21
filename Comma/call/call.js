@@ -75,7 +75,7 @@ function create() {
     const jsonString = JSON.stringify(request);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/api");
+    xhr.open("POST", "/api/");
     xhr.setRequestHeader("Login", login);
     xhr.setRequestHeader("Password", password);
     xhr.send(jsonString);
@@ -104,7 +104,7 @@ function connect() {
     const jsonString = JSON.stringify(request);
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/api");
+    xhr.open("POST", "/api/");
     xhr.setRequestHeader("Login", login);
     xhr.setRequestHeader("Password", password);
     xhr.send(jsonString);

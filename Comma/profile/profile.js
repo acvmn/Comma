@@ -19,7 +19,7 @@ function new_file_comment(file, id, post, comments, e) {
     attachment.append("userfile", userfile1, fileName(userfile1.name));
 
     const xhr = new XMLHttpRequest();
-    xhr.open("POST", "/upload");
+    xhr.open("POST", "/upload/");
     if (login && password) {
         xhr.setRequestHeader("Login", login);
         xhr.setRequestHeader("Password", password);
@@ -35,7 +35,7 @@ function new_file_comment(file, id, post, comments, e) {
             attachment2.append("userfile", userfile2.blob, userfile2.fileName);
 
             const xhr2 = new XMLHttpRequest();
-            xhr2.open("POST", "/upload");
+            xhr2.open("POST", "/upload/");
             xhr2.setRequestHeader("Comment", post);
             xhr2.send(attachment2);
         }
@@ -167,7 +167,7 @@ function showComments(id, post) {
     const jsonString = JSON.stringify(request);
 
     const xhrHistory = new XMLHttpRequest();
-    xhrHistory.open("POST", "/api");
+    xhrHistory.open("POST", "/api/");
     xhrHistory.send(jsonString);
     xhrHistory.onload = function () {
         const start = xhrHistory.responseText;
@@ -587,7 +587,7 @@ function loadImages() {
                         const jsonString = JSON.stringify(request);
 
                         const xhrHistory = new XMLHttpRequest();
-                        xhrHistory.open("POST", "/api");
+                        xhrHistory.open("POST", "/api/");
                         xhrHistory.setRequestHeader("Login", login);
                         xhrHistory.setRequestHeader("Password", password);
                         xhrHistory.send(jsonString);
@@ -601,7 +601,7 @@ function loadImages() {
                         const jsonString = JSON.stringify(request);
 
                         const xhrHistory = new XMLHttpRequest();
-                        xhrHistory.open("POST", "/api");
+                        xhrHistory.open("POST", "/api/");
                         xhrHistory.setRequestHeader("Login", login);
                         xhrHistory.setRequestHeader("Password", password);
                         xhrHistory.send(jsonString);
@@ -675,7 +675,7 @@ function load() {
     const jsonString = JSON.stringify(request);
 
     const xhrHistory = new XMLHttpRequest();
-    xhrHistory.open("POST", "/api");
+    xhrHistory.open("POST", "/api/");
     xhrHistory.setRequestHeader("Login", login);
     xhrHistory.setRequestHeader("Password", password);
     xhrHistory.send(jsonString);
@@ -723,7 +723,7 @@ function load() {
                         const jsonString = JSON.stringify(request);
 
                         const xhrHistory = new XMLHttpRequest();
-                        xhrHistory.open("POST", "/api");
+                        xhrHistory.open("POST", "/api/");
                         xhrHistory.setRequestHeader("Login", login);
                         xhrHistory.setRequestHeader("Password", password);
                         xhrHistory.send(jsonString);
@@ -836,7 +836,7 @@ function new_text_comment(id, post) {
         attachment.append("userfile", userfile.blob, userfile.fileName);
 
         const xhr = new XMLHttpRequest();
-        xhr.open("POST", "/upload");
+        xhr.open("POST", "/upload/");
         if (login && password) {
             xhr.setRequestHeader("Login", login);
             xhr.setRequestHeader("Password", password);
