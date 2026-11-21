@@ -17,6 +17,7 @@ git add "Comma\server.crt"
 git add "Comma\server.key"
 git add "Comma\sqlite3.c"
 git add "Setup\Debug"
+git add "preview.png"
 git add "push.bat"
 git commit -m "upd"
 git pull origin main --rebase
