@@ -1,0 +1,209 @@
+﻿:root {
+    --body-color: #ededed;
+    --card-color: #f7f7f7;
+    --first-red-color: #dc2626;
+    --second-red-color: #ff8f8f;
+    --gray-color: #5f6368;
+    --font-color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: "Inter", sans-serif;
+    margin: 0px;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main {
+    position: absolute;
+    top: calc(50vh - 290px);
+    height: 580px;
+    padding: 50px;
+    background-color: var(--card-color);
+    width: calc(100% - 10px);
+    max-width: 400px;
+    border-radius: 40px;
+    box-shadow: 0px 5px 35px 7px rgba(0, 0, 0, 0.15);
+}
+
+.sign {
+    color: var(--first-red-color);
+    font-family: "Inter", sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.form {
+    text-align: center;
+}
+
+.un {
+    width: calc(100%);
+    max-width: 250px;
+    color: var(--gray-color);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: var(--card-color);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    box-sizing: border-box;
+    margin-bottom: 50px;
+    text-align: center;
+    margin-bottom: 27px;
+    font-family: "Inter", sans-serif;
+}
+
+.pass {
+    width: calc(100%);
+    max-width: 250px;
+    color: var(--gray-color);
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    background-color: var(--card-color);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    box-sizing: border-box;
+    text-align: center;
+    margin-bottom: 50px;
+    font-family: "Inter", sans-serif;
+}
+
+    .un:focus, .pass:focus {
+        outline: 2px solid #dc2626;
+    }
+
+.buttons {
+    max-width: 250px;
+}
+
+.submit {
+    width: calc(100%);
+    margin-bottom: 10px;
+    background: var(--first-red-color);
+    color: var(--font-color);
+    font-weight: 600;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.15s;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+    .submit i {
+        font-size: 1.2rem;
+    }
+
+    .submit:hover {
+        filter: brightness(90%);
+        transform: scale(1.02);
+    }
+
+.buttons a {
+    text-shadow: 0px 0px 3px rgba(117, 117, 117, 0.12);
+    color: var(--font-color);
+    text-decoration: none
+}
+
+.feature-note {
+    position: absolute;
+    top: 700px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 32px;
+    padding-top: 20px;
+}
+
+    .feature-note a {
+        font-size: 0.9rem;
+        color: var(--gray-color);
+        text-decoration: none
+    }
+
+@keyframes gradient-flow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.toast-notification {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #dc2626;
+    color: var(--font-color);
+    padding: 16px 32px;
+    border-radius: 60px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(2px);
+    animation: slideDown 0.3s ease-out, fadeOut 0.3s ease-in 5.2s forwards;
+    max-width: 90vw;
+    text-align: center;
+    line-height: 1.4;
+    pointer-events: none;
+    box-shadow: 0px 5px 35px 7px rgba(0, 0, 0, 0.15);
+}
+
+    .toast-notification i {
+        font-size: 1.5rem;
+        filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+    }
+
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}

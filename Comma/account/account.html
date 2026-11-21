@@ -1,0 +1,39 @@
+<!-- Made by Nenboard -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Comma — Регистрация</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="account.css">
+</head>
+<body>
+    <div class="main">
+        <p class="sign" align="center">Регистрация / Вход</p>
+        <div class="form">
+            <input class="un " id="login" type="text" align="center" placeholder="Логин" maxlength="8" oninput='this.value=this.value.replace(/[^\w\d]*/gi,"");' onKeyDown="limitText(this, 8);" onKeyUp="limitText(this, 8);">
+            <input class="pass" id="password" type="password" align="center" placeholder="Пароль" maxlength="8" oninput='this.value=this.value.replace(/[^\w\d]*/gi,"");' onKeyDown="limitText(this, 8);" onKeyUp="limitText(this, 8);">
+            <center>
+                <div class="buttons">
+                    <button class="submit" align="center" onclick="reg()"><i class="fas fa-user"></i>Зарегистрироваться</button>
+                    <button class="submit" align="center" onclick="auth()"><i class="fas fa-user"></i>Войти</button>
+                    <button class="submit" align="center" onclick="out()"><i class="fas fa-user"></i>Выйти</button>
+                    <a class="submit" align="center" href="/"><i class="fas fa-undo"></i>На главную</a>
+                </div>
+            </center>
+        </div>
+    </div>
+
+    <div class="feature-note">
+        <a href="/moderation/">Правила модерации</a>
+        <a href="/agreement/">Пользовательское соглашение</a>
+        <a href="/policy/">Политика конфиденциальности</a>
+    </div>
+
+    <script src="account.js"></script>
+    <script src="/assets/agreement.js"></script>
+</body>
+</html>

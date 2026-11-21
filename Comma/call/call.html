@@ -1,0 +1,54 @@
+<!-- Made by Nenboard -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comma — Звонок</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="call.css">
+</head>
+<body>
+    <div class="main" id="main">
+        <h1>Аудиозвонок</h1>
+        <div id="status">Ожидание...</div>
+        <button class="button" id="createBtn"><i class="fas fa-phone"></i>Создать комнату</button>
+        <div class="div"></div>
+        <input class="room" id="room" type="text" placeholder="Введите комнату..." maxlength="6" oninput='this.value = this.value.replace(/[^0-9]/g, "");' onKeyDown="limitText(this, 6);" onKeyUp="limitText(this, 6);">
+        <button class="button" id="connectBtn"><i class="fas fa-phone"></i>Войти в комнату</button>
+        <div class="div"></div>
+        <div id="remoteAudio"></div>
+        <a class="button" href="/"><i class="fas fa-undo"></i>На главную</a>
+    </div>
+
+    <div class="root">
+        <div class="top" id="top">
+            <h1 id="title">00:00</h1>
+        </div>
+
+        <div class="screen-container" id="screen-container">
+            <h2 class="demo-info" id="demo-info">Здесь будет демонстрация...</h2>
+            <div>
+                <video id="localScreenPreview" class="screen-video" autoplay muted playsinline></video>
+            </div>
+            <div>
+                <video id="remoteScreen" class="screen-video" autoplay playsinline></video>
+            </div>
+            <div class="messages" id="messages" style="display:none;">
+                <div class="child" id="child"></div>
+                <textarea class="input" id="input" placeholder="Сообщение..." style="display:none;"></textarea>
+            </div>
+        </div>
+
+        <div class="bottom" id="bottom">
+            <button class="share" id="shareScreenBtn" style="display:none;" disabled><i class="fas fa-desktop"></i>Демонстрация</button>
+            <button class="chat" id="chatBtn" style="display:none;" disabled><i class="fas fa-message"></i>Чат</button>
+        </div>
+    </div>
+
+    <script src="call.js"></script>
+    <script src="/assets/agreement.js"></script>
+</body>
+</html>
