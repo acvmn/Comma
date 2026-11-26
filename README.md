@@ -2,7 +2,7 @@
 Comma is a social network whose backend is written in C++ using SQLite3 and OpenSSL. The nlohmann JSON parser was used as the JSON parser. The site works with basic encryption. The repository contains all the files so that you can run the social network locally on your own computer or in production. The project has fixed the basic vulnerabilities (at least, the ones I noticed).
 
 ## Starting up on localhost
-In order to be able to run it, you need to:
+In order to be able to run it, you need to download file Setup.msi and run them, or:
  - create a new project in Visual Studio
  - add all the files to it
  - and in the project properties
@@ -11,6 +11,14 @@ In order to be able to run it, you need to:
  - specify the Console subsystem,
  - additional include directories ("C:\Program Files\OpenSSL-Win64\include"; "C:\Users\User\source\repos\Comma\Comma")
  - and the C++ 20 standard.
+
+## Functions
+In Comma, you can:
+ - to like
+ - comment
+ - call
+ - create profiles
+ - publish files or posts
 
 ## Config
 In the config.txt file, you can change some server operation parameters (you cannot change the order of the configs or delete them):
